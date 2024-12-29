@@ -3,7 +3,8 @@ name: Deploy Hexo to GitHub Pages
 on:
   push:
     branches:
-      - master  # 或者你使用的其他主分支，比如 `master`
+      - master  # 或者你使用的主分支
+  workflow_dispatch:  # 手动触发支持
 
 jobs:
   deploy:
@@ -16,12 +17,19 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'  # 你需要的 Node.js 版本
+        node-version: '16'  # Node.js 的 LTS 版本
 
     - name: Install dependencies
       run: |
         npm install
         npm install hexo-deployer-git --save
+
+    - name: Setup SSH
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
 
     - name: Generate and deploy
       run: |
