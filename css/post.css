@@ -66,14 +66,6 @@ hr,
   padding: 0 16px;
 }
 
-/* 默认样式：图片按块级元素显示 */
-.content p img,
-.content .block-large img {
-  border-radius: 10px;
-  max-width: 100%; /* 默认图片最大宽度为100% */
-  margin-bottom: 10px; /* 图片下方间距 */
-}
-
 /* 浮动效果：图片浮动到左侧 */
 .content p img.float-left,
 .content .block-large img.float-left {
@@ -111,14 +103,25 @@ hr,
   float: right;
   height: auto;  /* 保持图片的纵横比 */
 }
-/* sideview */
+/* centerview */
 .content p img,
 .content .block-large img {
   border-radius: 10px;
-  max-width: 70%; /* 默认图片最大宽度为100% */
+  max-width: 100%; /* 默认图片最大宽度为70% */
+  margin: 0 auto; /* 水平居中 */
   margin-bottom: 10px; /* 图片下方间距 */
-  align-items: center;
+  display: block; /* 将图片作为块级元素，便于居中 */
 }
+/* centerview-little */
+.content p img.little,
+.content .block-large img.little {
+  border-radius: 10px;
+  max-width: 50%; /* 默认图片最大宽度为70% */
+  margin: 0 auto; /* 水平居中 */
+  margin-bottom: 10px; /* 图片下方间距 */
+  display: block; /* 将图片作为块级元素，便于居中 */
+}
+
 
 
 /* 使图片容器宽度匹配图片宽度，并将其偏左 */
