@@ -160,6 +160,15 @@ hr,
   font-size: 12px; /* 设置字体大小为12px */
   color: #555; /* 可选，调整文本颜色 */
 }
+/* 浮动效果：图片浮动右侧，但是太小 */
+.content p img.float-rightenlarge,
+.content .block-large img.float-rightenlarge {
+  max-width: 50%;  /* 图片最大宽度为50% */
+  margin-right: 15px;  /* 右边距，避免文字与图片重叠 */
+  margin-bottom: 10px; /* 浮动图片的底部间距 */
+  float: right;
+  height: auto;  /* 保持图片的纵横比 */
+}
 
 
 .content table,
