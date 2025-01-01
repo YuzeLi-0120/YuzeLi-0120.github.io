@@ -121,6 +121,14 @@ hr,
   margin-bottom: 10px; /* 图片下方间距 */
   display: block; /* 将图片作为块级元素，便于居中 */
 }
+.content p img.s70,
+.content .block-large img.s70 {
+  border-radius: 10px;
+  max-width: 70%; /* 默认图片最大宽度为70% */
+  margin: 0 auto; /* 水平居中 */
+  margin-bottom: 10px; /* 图片下方间距 */
+  display: block; /* 将图片作为块级元素，便于居中 */
+}
 
 
 
