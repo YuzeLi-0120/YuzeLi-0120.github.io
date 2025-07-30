@@ -94,6 +94,15 @@ hr,
   float: left;
   height: auto;  /* 保持图片的纵横比 */
 }
+/* 浮动效果：教师大 */
+.content p img.float-teacher-main,
+.content .block-large img.float-left {
+  max-width: 35%;  /* 图片最大宽度为50% */
+  margin-right: 15px;  /* 右边距，避免文字与图片重叠 */
+  margin-bottom: 10px; /* 浮动图片的底部间距 */
+  float: left;
+  height: auto;  /* 保持图片的纵横比 */
+}
 /* 浮动效果：code */
 .content p img.float-right,
 .content .block-large img.float-right {
@@ -129,7 +138,14 @@ hr,
   margin-bottom: 10px; /* 图片下方间距 */
   display: block; /* 将图片作为块级元素，便于居中 */
 }
-
+.content p img.s50,
+.content .block-large img.s50 {
+  border-radius: 10px;
+  max-width: 50%; /* 默认图片最大宽度为70% */
+  margin: 0 auto; /* 水平居中 */
+  margin-bottom: 10px; /* 图片下方间距 */
+  display: block; /* 将图片作为块级元素，便于居中 */
+}
 
 
 /* 使图片容器宽度匹配图片宽度，并将其偏左 */
